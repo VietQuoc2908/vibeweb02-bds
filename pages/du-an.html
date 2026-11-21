@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dự án bất động sản – NhàĐất Việt</title>
+  <meta name="description" content="Tổng hợp dự án căn hộ, biệt thự, đất nền đang mở bán và sắp mở bán tại Hà Nội, TP.HCM, Đà Nẵng, Bình Dương – pháp lý minh bạch, giá cập nhật." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/page.css" />
+  <link rel="stylesheet" href="../assets/css/pages/du-an.css" />
+</head>
+<body>
+
+  <!-- Logo mark dùng chung (header + footer) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#4ade80" />
+        <stop offset=".55" stop-color="#16a34a" />
+        <stop offset="1" stop-color="#065f46" />
+      </linearGradient>
+    </defs>
+    <symbol id="logoMark" viewBox="0 0 48 48">
+      <rect width="48" height="48" rx="13" fill="url(#logoGrad)" />
+      <path d="M8 13 Q24 2 40 13" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="10" stroke-linecap="round" />
+      <path d="M10 23.5 24 12l14 11.5" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M14.5 21v14.5h19V21" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M24 34c-4.6-2-5.2-8.6 0-12.8 5.2 4.2 4.6 10.8 0 12.8Z" fill="#fff" />
+      <path d="M24 33V24.5" stroke="#16a34a" stroke-width="1.4" stroke-linecap="round" />
+    </symbol>
+  </svg>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="container header-inner">
+      <a href="../index.html" class="logo" aria-label="NhàĐất Việt – Trang chủ"><svg class="logo-mark" aria-hidden="true"><use href="#logoMark"/></svg><span class="logo-text"><span class="logo-name">NhàĐất<b>Việt</b></span><span class="logo-tag">Bất động sản xanh</span></span></a>
+      <nav class="main-nav" id="mainNav">
+        <a href="../index.html">Trang chủ</a>
+        <a href="#gioi-thieu">Giới thiệu</a>
+        <a href="#danh-sach">Danh sách dự án</a>
+        <a href="#tien-ich">Vì sao chọn</a>
+        <a href="#quy-trinh">Quy trình</a>
+        <a href="#hoi-dap">Hỏi đáp</a>
+        <a href="#lien-he">Liên hệ</a>
+      </nav>
+      <div class="header-actions">
+        <a href="#lien-he" class="btn btn-primary">Nhận bảng giá</a>
+        <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Mở menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="lp-hero" id="gioi-thieu">
+      <img class="lp-hero-bg" src="https://picsum.photos/seed/du-an-hero/1600/900" alt="Phối cảnh khu đô thị mới với nhiều tòa căn hộ cao tầng" />
+      <div class="container lp-hero-inner">
+        <span class="lp-eyebrow">Dự án bất động sản 2026</span>
+        <h1>Chọn đúng dự án, <em>an cư vững vàng</em></h1>
+        <p class="lp-lead">Hơn 120 dự án căn hộ, biệt thự và đất nền được thẩm định pháp lý, cập nhật giá và tiến độ hằng tuần tại các đô thị lớn.</p>
+        <div class="lp-actions">
+          <a href="#danh-sach" class="btn btn-primary btn-lg">Xem danh sách dự án</a>
+          <a href="#lien-he" class="btn btn-ghost btn-lg">Nhận tư vấn miễn phí</a>
+        </div>
+        <ul class="lp-trust">
+          <li>✔ Pháp lý được kiểm tra</li>
+          <li>✔ Giá gốc chủ đầu tư</li>
+          <li>✔ Hỗ trợ vay đến 70%</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== NỔI BẬT ===== -->
+    <section class="lp-section" id="noi-bat">
+      <div class="container">
+        <div class="lp-stats">
+          <div class="lp-stat reveal"><strong data-count="120" data-suffix="+">0</strong><span>Dự án đang theo dõi</span></div>
+          <div class="lp-stat reveal"><strong data-count="38">0</strong><span>Chủ đầu tư đối tác</span></div>
+          <div class="lp-stat reveal"><strong data-count="15600" data-suffix="+">0</strong><span>Khách hàng đã tư vấn</span></div>
+          <div class="lp-stat reveal"><strong data-count="96" data-suffix="%">0</strong><span>Khách hài lòng</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DANH SÁCH DỰ ÁN ===== -->
+    <section class="lp-section soft" id="danh-sach">
+      <div class="container">
+        <div class="lp-head reveal">
+          <span class="lp-eyebrow">Danh sách dự án</span>
+          <h2>Dự án đang mở bán &amp; sắp mở bán</h2>
+          <p>Lọc theo khu vực hoặc tình trạng để tìm dự án phù hợp với nhu cầu và ngân sách của bạn.</p>
+        </div>
+
+        <div class="da-toolbar reveal">
+          <div class="lp-tabs da-filter" role="group" aria-label="Lọc theo khu vực" id="regionFilter">
+            <button type="button" aria-selected="true" data-region="all">Tất cả</button>
+            <button type="button" aria-selected="false" data-region="Hà Nội">Hà Nội</button>
+            <button type="button" aria-selected="false" data-region="TP. Hồ Chí Minh">TP.HCM</button>
+            <button type="button" aria-selected="false" data-region="Đà Nẵng">Đà Nẵng</button>
+            <button type="button" aria-selected="false" data-region="Bình Dương">Bình Dương</button>
+          </div>
+          <label class="da-select">
+            <span class="sr-only">Lọc theo tình trạng</span>
+            <select id="statusFilter">
+              <option value="all">Mọi tình trạng</option>
+              <option value="open">Đang mở bán</option>
+              <option value="soon">Sắp mở bán</option>
+              <option value="done">Đã bàn giao</option>
+            </select>
+          </label>
+        </div>
+
+        <p class="da-count" id="projectCount" aria-live="polite"></p>
+        <div class="projects da-grid" id="projectGrid"></div>
+        <p class="da-empty" id="projectEmpty" hidden>Chưa có dự án phù hợp với bộ lọc. Hãy thử khu vực hoặc tình trạng khác.</p>
+      </div>
+    </section>
+
+    <!-- ===== VÌ SAO CHỌN ===== -->
+    <section class="lp-section" id="tien-ich">
+      <div class="container">
+        <div class="lp-head reveal">
+          <span class="lp-eyebrow">Vì sao chọn NhàĐất Việt</span>
+          <h2>Mua dự án an tâm từ bước đầu tiên</h2>
+          <p>Chúng tôi đồng hành từ lúc chọn dự án đến khi nhận nhà và hoàn tất sổ hồng.</p>
+        </div>
+        <div class="lp-features">
+          <article class="lp-feature reveal">
+            <div class="lp-icon" aria-hidden="true">📜</div>
+            <h3>Thẩm định pháp lý</h3>
+            <p>Kiểm tra quyết định giao đất, giấy phép xây dựng và bảo lãnh ngân hàng trước khi giới thiệu dự án.</p>
+          </article>
+          <article class="lp-feature reveal">
+            <div class="lp-icon" aria-hidden="true">💰</div>
+            <h3>Giá gốc, không chênh</h3>
+            <p>Bảng giá lấy trực tiếp từ chủ đầu tư, kèm chiết khấu và chính sách thanh toán mới nhất.</p>
+          </article>
+          <article class="lp-feature reveal">
+            <div class="lp-icon" aria-hidden="true">🏦</div>
+            <h3>Hỗ trợ vay ưu đãi</h3>
+            <p>Kết nối ngân hàng cho vay đến 70% giá trị, ân hạn nợ gốc và lãi suất cố định trong 18 tháng.</p>
+          </article>
+          <article class="lp-feature reveal">
+            <div class="lp-icon" aria-hidden="true">🏗️</div>
+            <h3>Cập nhật tiến độ</h3>
+            <p>Hình ảnh công trường được cập nhật hằng tháng để bạn theo dõi tiến độ xây dựng thực tế.</p>
+          </article>
+          <article class="lp-feature reveal">
+            <div class="lp-icon" aria-hidden="true">🚗</div>
+            <h3>Tham quan miễn phí</h3>
+            <p>Đặt lịch xem nhà mẫu và dự án thực tế, có xe đưa đón tại nội thành vào cuối tuần.</p>
+          </article>
+          <article class="lp-feature reveal">
+            <div class="lp-icon" aria-hidden="true">🤝</div>
+            <h3>Đồng hành sau bán</h3>
+            <p>Hỗ trợ ký hợp đồng, nhận bàn giao, làm sổ hồng và tìm khách thuê nếu bạn đầu tư.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== QUY TRÌNH ===== -->
+    <section class="lp-section soft" id="quy-trinh">
+      <div class="container">
+        <div class="lp-head reveal">
+          <span class="lp-eyebrow">Quy trình</span>
+          <h2>4 bước sở hữu căn hộ dự án</h2>
+        </div>
+        <ol class="lp-steps">
+          <li class="reveal"><h3>Tư vấn nhu cầu</h3><p>Trao đổi ngân sách, khu vực, mục đích ở hay đầu tư để lọc ra 3–5 dự án phù hợp.</p></li>
+          <li class="reveal"><h3>Tham quan &amp; so sánh</h3><p>Xem nhà mẫu, công trường; nhận bảng so sánh giá, tiện ích và pháp lý từng dự án.</p></li>
+          <li class="reveal"><h3>Đặt chỗ &amp; ký HĐ</h3><p>Chọn căn, đặt cọc giữ chỗ và rà soát hợp đồng mua bán cùng chuyên viên pháp lý.</p></li>
+          <li class="reveal"><h3>Nhận nhà, ra sổ</h3><p>Kiểm tra bàn giao, hoàn tất thanh toán và hỗ trợ thủ tục cấp sổ hồng.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== HỎI ĐÁP ===== -->
+    <section class="lp-section" id="hoi-dap">
+      <div class="container lp-narrow">
+        <div class="lp-head reveal"><h2>Câu hỏi thường gặp</h2></div>
+        <div class="lp-faq">
+          <details class="reveal">
+            <summary>Làm sao biết dự án đã đủ điều kiện mở bán?</summary>
+            <p>Dự án cần có giấy phép xây dựng, đã xong phần móng và có văn bản của Sở Xây dựng xác nhận đủ điều kiện bán nhà hình thành trong tương lai. Chúng tôi gửi kèm các giấy tờ này khi tư vấn.</p>
+          </details>
+          <details class="reveal">
+            <summary>Mua qua NhàĐất Việt có đắt hơn mua trực tiếp không?</summary>
+            <p>Không. Giá và chính sách giống hệt chủ đầu tư công bố; phí dịch vụ do chủ đầu tư chi trả, khách hàng không mất thêm chi phí.</p>
+          </details>
+          <details class="reveal">
+            <summary>Tôi cần chuẩn bị bao nhiêu tiền để mua căn hộ?</summary>
+            <p>Thông thường bạn cần khoảng 30% giá trị căn hộ, phần còn lại có thể vay ngân hàng và thanh toán theo tiến độ xây dựng trong 18–24 tháng.</p>
+          </details>
+          <details class="reveal">
+            <summary>Có thể đặt cọc giữ chỗ rồi hoàn lại không?</summary>
+            <p>Phần lớn dự án cho phép hoàn 100% tiền giữ chỗ nếu bạn chưa ký thỏa thuận đặt cọc. Điều kiện cụ thể sẽ được ghi rõ trong phiếu giữ chỗ.</p>
+          </details>
+          <details class="reveal">
+            <summary>Bao lâu sau khi nhận nhà thì có sổ hồng?</summary>
+            <p>Theo quy định, chủ đầu tư phải làm thủ tục cấp sổ trong vòng 50 ngày kể từ khi bàn giao; thực tế thường từ 6 đến 12 tháng tùy địa phương.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA + LIÊN HỆ ===== -->
+    <section class="lp-section soft" id="lien-he">
+      <div class="container">
+        <div class="lp-cta reveal">
+          <div>
+            <h2>Nhận bảng giá &amp; chính sách mới nhất</h2>
+            <p>Đăng ký trong tháng này để được đặt lịch tham quan miễn phí và ưu đãi chiết khấu đến 5%.</p>
+          </div>
+          <a href="tel:19000000" class="btn btn-light btn-lg">📞 Gọi 1900 0000</a>
+        </div>
+
+        <div class="lp-contact">
+          <form class="lp-form reveal" id="contactForm" novalidate>
+            <h3>Đăng ký tư vấn dự án</h3>
+            <div class="lp-field-row">
+              <label class="lp-field"><span>Họ và tên *</span><input name="name" type="text" required autocomplete="name" /></label>
+              <label class="lp-field"><span>Số điện thoại *</span><input name="phone" type="tel" required pattern="(0|\+84)[0-9]{9}" autocomplete="tel" /></label>
+            </div>
+            <label class="lp-field"><span>Email</span><input name="email" type="email" autocomplete="email" /></label>
+            <label class="lp-field"><span>Dự án quan tâm *</span>
+              <select name="need" id="projectSelect" required>
+                <option value="">-- Chọn dự án --</option>
+                <option value="Chưa chọn">Chưa chọn, cần tư vấn thêm</option>
+              </select>
+            </label>
+            <label class="lp-field"><span>Lời nhắn</span><textarea name="message" rows="4" placeholder="Ví dụ: Tìm căn 2 phòng ngủ, ngân sách khoảng 3 tỷ"></textarea></label>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Gửi yêu cầu tư vấn</button>
+            <p class="lp-note">Thông tin của bạn được bảo mật (dữ liệu demo).</p>
+          </form>
+          <aside class="lp-info reveal">
+            <h3>Thông tin liên hệ</h3>
+            <ul>
+              <li><span aria-hidden="true">📍</span>Tầng 10, Tòa nhà ABC, Quận 1, TP. Hồ Chí Minh</li>
+              <li><span aria-hidden="true">📞</span>Hotline: 1900 0000</li>
+              <li><span aria-hidden="true">✉️</span>duan@nhadatviet.example</li>
+              <li><span aria-hidden="true">🕘</span>8:00 – 20:00, Thứ 2 – Chủ nhật</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-contact">
+          <a href="../index.html" class="logo footer-logo"><svg class="logo-mark" aria-hidden="true"><use href="#logoMark"/></svg><span class="logo-text"><span class="logo-name">NhàĐất<b>Việt</b></span><span class="logo-tag">Bất động sản xanh</span></span></a>
+          <p>Công ty Cổ phần NhàĐất Việt (dữ liệu demo)</p>
+          <p>📍 Tầng 10, Tòa nhà ABC, Quận 1, TP. Hồ Chí Minh</p>
+          <p>📞 Hotline: 1900 0000</p>
+          <p>✉️ hotro@nhadatviet.example</p>
+        </div>
+        <div>
+          <h4>Hướng dẫn</h4>
+          <ul><li><a href="#">Về chúng tôi</a></li><li><a href="#">Báo giá & hỗ trợ</a></li><li><a href="#">Câu hỏi thường gặp</a></li><li><a href="#">Góp ý báo lỗi</a></li><li><a href="#">Sitemap</a></li></ul>
+        </div>
+        <div>
+          <h4>Quy định</h4>
+          <ul><li><a href="#">Quy định đăng tin</a></li><li><a href="#">Quy chế hoạt động</a></li><li><a href="#">Điều khoản thỏa thuận</a></li><li><a href="#">Chính sách bảo mật</a></li><li><a href="#">Giải quyết khiếu nại</a></li></ul>
+        </div>
+        <div>
+          <h4>Đăng ký nhận tin</h4>
+          <p class="muted">Nhận thông tin bất động sản mới nhất qua email.</p>
+          <form class="newsletter" id="newsletterForm">
+            <input type="email" placeholder="Nhập email của bạn" required />
+            <button type="submit">Gửi</button>
+          </form>
+        </div>
+      </div>
+      <div class="copyright">© 2026 NhàĐất Việt – Trang demo học tập. Mọi dữ liệu chỉ mang tính minh họa.</div>
+    </div>
+  </footer>
+
+  <button class="lp-top" id="backToTop" aria-label="Lên đầu trang">↑</button>
+  <div class="lp-toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="../assets/js/page.js"></script>
+  <script src="../assets/js/pages/du-an.js"></script>
+</body>
+</html>

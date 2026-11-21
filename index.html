@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NhàĐất Việt – Kênh thông tin mua bán, cho thuê nhà đất</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- Logo mark dùng chung (header + footer) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#4ade80" />
+        <stop offset=".55" stop-color="#16a34a" />
+        <stop offset="1" stop-color="#065f46" />
+      </linearGradient>
+    </defs>
+    <symbol id="logoMark" viewBox="0 0 48 48">
+      <rect width="48" height="48" rx="13" fill="url(#logoGrad)" />
+      <path d="M8 13 Q24 2 40 13" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="10" stroke-linecap="round" />
+      <path d="M10 23.5 24 12l14 11.5" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M14.5 21v14.5h19V21" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M24 34c-4.6-2-5.2-8.6 0-12.8 5.2 4.2 4.6 10.8 0 12.8Z" fill="#fff" />
+      <path d="M24 33V24.5" stroke="#16a34a" stroke-width="1.4" stroke-linecap="round" />
+    </symbol>
+  </svg>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="NhàĐất Việt – Trang chủ"><svg class="logo-mark" aria-hidden="true"><use href="#logoMark"/></svg><span class="logo-text"><span class="logo-name">NhàĐất<b>Việt</b></span><span class="logo-tag">Bất động sản xanh</span></span></a>
+      <nav class="main-nav" id="mainNav">
+        <a href="#">Nhà đất bán</a>
+        <a href="#">Nhà đất cho thuê</a>
+        <a href="pages/du-an.html">Dự án</a>
+        <a href="#news">Tin tức</a>
+        <a href="#">Wiki BĐS</a>
+        <a href="#">Phân tích đánh giá</a>
+        <a href="#">Danh bạ</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn hide-sm" title="Tin đã lưu">♡</button>
+        <button class="btn hide-sm">Đăng nhập</button>
+        <button class="btn hide-sm">Đăng ký</button>
+        <button class="btn btn-primary">Đăng tin</button>
+        <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Mở menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO SEARCH ===== -->
+  <div class="hero">
+    <div class="container">
+      <div class="search-box">
+        <div class="search-tabs" id="searchTabs">
+          <button class="active">Nhà đất bán</button>
+          <button>Nhà đất cho thuê</button>
+          <button>Dự án</button>
+        </div>
+        <div class="search-panel">
+          <form class="search-row" id="searchForm">
+            <select name="city">
+              <option>Toàn quốc</option><option>Hà Nội</option><option>Hồ Chí Minh</option>
+              <option>Đà Nẵng</option><option>Bình Dương</option><option>Hải Phòng</option>
+            </select>
+            <input name="q" type="text" placeholder="Nhập tối đa 5 địa điểm, dự án. Ví dụ: Quận Hoàn Kiếm, Hà Nội" />
+            <button type="submit">Tìm kiếm</button>
+          </form>
+          <div class="filters">
+            <select><option>Loại nhà đất</option><option>Căn hộ chung cư</option><option>Nhà riêng</option><option>Nhà biệt thự, liền kề</option><option>Nhà mặt phố</option><option>Đất nền dự án</option><option>Bán đất</option></select>
+            <select><option>Mức giá</option><option>Dưới 500 triệu</option><option>500 - 800 triệu</option><option>800 triệu - 1 tỷ</option><option>1 - 2 tỷ</option><option>2 - 3 tỷ</option><option>3 - 5 tỷ</option><option>Trên 5 tỷ</option></select>
+            <select><option>Diện tích</option><option>Dưới 30 m²</option><option>30 - 50 m²</option><option>50 - 80 m²</option><option>80 - 100 m²</option><option>100 - 150 m²</option><option>Trên 150 m²</option></select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== NEWS ===== -->
+  <section id="news">
+    <div class="container">
+      <div class="news-tabs" id="newsTabs">
+        <button class="active">Tin nổi bật</button>
+        <button>Tin tức</button>
+        <button>BĐS TP.HCM</button>
+        <button>BĐS Hà Nội</button>
+      </div>
+      <div class="news-grid">
+        <a href="#" class="news-feature">
+          <img src="https://picsum.photos/seed/news1/800/450" alt="Tin nổi bật" />
+          <h3>Thị trường bất động sản cuối năm: Nguồn cung căn hộ tăng mạnh tại các đô thị lớn</h3>
+          <p>2 giờ trước · Phân tích nhận định</p>
+        </a>
+        <ul class="news-list">
+          <li>Giá chung cư Hà Nội tiếp tục lập đỉnh mới trong quý III</li>
+          <li>Lãi suất vay mua nhà giảm, người mua quay lại thị trường</li>
+          <li>Những khu vực có tiềm năng tăng giá nhờ hạ tầng giao thông</li>
+          <li>Kinh nghiệm kiểm tra pháp lý trước khi đặt cọc mua đất</li>
+          <li>Đất nền vùng ven TP.HCM: Cơ hội hay rủi ro?</li>
+          <li>Xu hướng thuê căn hộ dịch vụ của người trẻ tại đô thị</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LISTINGS ===== -->
+  <section class="soft">
+    <div class="container">
+      <div class="section-head">
+        <h2>Bất động sản dành cho bạn</h2>
+        <a href="#">Tin nhà đất bán mới nhất · Tin nhà đất cho thuê mới nhất</a>
+      </div>
+      <div class="cards" id="listings"></div>
+      <div class="center"><button class="btn" id="loadMore">Mở rộng ⌄</button></div>
+    </div>
+  </section>
+
+  <!-- ===== LOCATIONS ===== -->
+  <section>
+    <div class="container">
+      <div class="section-head"><h2>Bất động sản theo địa điểm</h2></div>
+      <div class="loc-grid">
+        <a href="#" class="loc big"><img src="https://picsum.photos/seed/hcm/800/600" alt="TP. Hồ Chí Minh" /><div class="loc-info"><h3>TP. Hồ Chí Minh</h3><p>68.420 tin đăng</p></div></a>
+        <a href="#" class="loc"><img src="https://picsum.photos/seed/hanoi/500/400" alt="Hà Nội" /><div class="loc-info"><h3>Hà Nội</h3><p>59.105 tin đăng</p></div></a>
+        <a href="#" class="loc"><img src="https://picsum.photos/seed/danang/500/400" alt="Đà Nẵng" /><div class="loc-info"><h3>Đà Nẵng</h3><p>12.310 tin đăng</p></div></a>
+        <a href="#" class="loc"><img src="https://picsum.photos/seed/binhduong/500/400" alt="Bình Dương" /><div class="loc-info"><h3>Bình Dương</h3><p>9.870 tin đăng</p></div></a>
+        <a href="#" class="loc"><img src="https://picsum.photos/seed/dongnai/500/400" alt="Đồng Nai" /><div class="loc-info"><h3>Đồng Nai</h3><p>6.540 tin đăng</p></div></a>
+      </div>
+      <div class="loc-links">
+        <a href="#">Bán nhà riêng Hà Nội</a><a href="#">Bán căn hộ TP.HCM</a><a href="#">Cho thuê nhà trọ Hà Nội</a><a href="#">Bán đất nền Đà Nẵng</a>
+        <a href="#">Bán biệt thự Hà Nội</a><a href="#">Cho thuê căn hộ TP.HCM</a><a href="#">Bán nhà mặt phố Hải Phòng</a><a href="#">Bán đất Bình Dương</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="soft" id="projects">
+    <div class="container">
+      <div class="section-head"><h2>Dự án bất động sản nổi bật</h2><a href="pages/du-an.html">Xem tất cả dự án →</a></div>
+      <div class="projects">
+        <a href="pages/du-an.html#danh-sach" class="project"><img src="https://picsum.photos/seed/proj1/640/360" alt="" /><div class="project-body"><span class="status">Đang mở bán</span><h3>Riverside Garden Residence</h3><p>Thủ Đức, TP. Hồ Chí Minh · 45 - 60 triệu/m²</p></div></a>
+        <a href="pages/du-an.html#danh-sach" class="project"><img src="https://picsum.photos/seed/proj2/640/360" alt="" /><div class="project-body"><span class="status soon">Sắp mở bán</span><h3>Sky Lake Tower</h3><p>Nam Từ Liêm, Hà Nội · 55 - 75 triệu/m²</p></div></a>
+        <a href="pages/du-an.html#danh-sach" class="project"><img src="https://picsum.photos/seed/proj3/640/360" alt="" /><div class="project-body"><span class="status">Đang mở bán</span><h3>Ocean Bay Villas</h3><p>Ngũ Hành Sơn, Đà Nẵng · 12 - 25 tỷ/căn</p></div></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== UTILITIES ===== -->
+  <section>
+    <div class="container">
+      <div class="section-head"><h2>Hỗ trợ tiện ích</h2></div>
+      <div class="utils">
+        <a href="#" class="util"><div class="util-icon">🧭</div>Tư vấn phong thủy</a>
+        <a href="#" class="util"><div class="util-icon">🏗️</div>Dự tính chi phí làm nhà</a>
+        <a href="#" class="util"><div class="util-icon">💰</div>Tính lãi suất vay</a>
+        <a href="#" class="util"><div class="util-icon">📋</div>Quy trình xây nhà</a>
+        <a href="#" class="util"><div class="util-icon">📅</div>Xem tuổi làm nhà</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PARTNERS ===== -->
+  <section class="soft">
+    <div class="container">
+      <div class="section-head"><h2>Doanh nghiệp tiêu biểu</h2></div>
+      <div class="partners">
+        <div class="partner">An Phát Land</div><div class="partner">Minh Long Group</div><div class="partner">Hưng Thịnh Corp</div>
+        <div class="partner">Sao Việt Realty</div><div class="partner">Đông Á Homes</div><div class="partner">Phú Gia Invest</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== APP BANNER ===== -->
+  <section>
+    <div class="container">
+      <div class="app-banner">
+        <div>
+          <h2>Tải ứng dụng NhàĐất Việt</h2>
+          <p>Tìm nhà nhanh hơn, nhận thông báo tin đăng mới mọi lúc mọi nơi.</p>
+        </div>
+        <div class="store-btns"><a href="#"> App Store</a><a href="#">▶ Google Play</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-contact">
+          <a href="#" class="logo footer-logo"><svg class="logo-mark" aria-hidden="true"><use href="#logoMark"/></svg><span class="logo-text"><span class="logo-name">NhàĐất<b>Việt</b></span><span class="logo-tag">Bất động sản xanh</span></span></a>
+          <p>Công ty Cổ phần NhàĐất Việt (dữ liệu demo)</p>
+          <p>📍 Tầng 10, Tòa nhà ABC, Quận 1, TP. Hồ Chí Minh</p>
+          <p>📞 Hotline: 1900 0000</p>
+          <p>✉️ hotro@nhadatviet.example</p>
+        </div>
+        <div>
+          <h4>Hướng dẫn</h4>
+          <ul><li><a href="#">Về chúng tôi</a></li><li><a href="#">Báo giá & hỗ trợ</a></li><li><a href="#">Câu hỏi thường gặp</a></li><li><a href="#">Góp ý báo lỗi</a></li><li><a href="#">Sitemap</a></li></ul>
+        </div>
+        <div>
+          <h4>Quy định</h4>
+          <ul><li><a href="#">Quy định đăng tin</a></li><li><a href="#">Quy chế hoạt động</a></li><li><a href="#">Điều khoản thỏa thuận</a></li><li><a href="#">Chính sách bảo mật</a></li><li><a href="#">Giải quyết khiếu nại</a></li></ul>
+        </div>
+        <div>
+          <h4>Đăng ký nhận tin</h4>
+          <p class="muted">Nhận thông tin bất động sản mới nhất qua email.</p>
+          <form class="newsletter" id="newsletterForm">
+            <input type="email" placeholder="Nhập email của bạn" required />
+            <button type="submit">Gửi</button>
+          </form>
+        </div>
+      </div>
+      <div class="copyright">© 2026 NhàĐất Việt – Trang demo học tập. Mọi dữ liệu chỉ mang tính minh họa.</div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

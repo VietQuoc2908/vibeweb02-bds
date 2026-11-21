@@ -1,0 +1,47 @@
+/* ===== Trang Dự án – style riêng ===== */
+
+/* Thanh lọc */
+.da-toolbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 16px; }
+.da-filter { justify-content: flex-start; margin-bottom: 0; }
+.da-select select { padding: 9px 36px 9px 14px; border: 1px solid var(--border); border-radius: 999px; background: var(--card); color: var(--text); font: inherit; font-size: 14px; }
+.da-select select:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(22,163,74,.18); }
+.da-count { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+.da-empty { text-align: center; color: var(--muted); padding: 40px 0; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Thẻ dự án (mở rộng .project trong style.css) */
+.da-grid .project { display: flex; flex-direction: column; border-radius: var(--lp-radius); transition: transform .25s, box-shadow .25s; animation: lpFade .35s ease; }
+.da-grid .project:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,.12); }
+.da-media { position: relative; overflow: hidden; }
+.da-media img { transition: transform .5s; }
+.da-grid .project:hover .da-media img { transform: scale(1.05); }
+.da-media .status { position: absolute; top: 10px; left: 10px; margin: 0; font-weight: 500; }
+.status.done { background: #e0e7ff; color: #3730a3; }
+.da-type { position: absolute; right: 10px; bottom: 10px; background: rgba(0,0,0,.6); color: #fff; font-size: 12px; padding: 2px 8px; border-radius: 4px; }
+.da-grid .project-body { display: flex; flex-direction: column; gap: 4px; flex: 1; padding: 16px; }
+.da-grid .project h3 { font-size: 17px; font-weight: 700; }
+.da-loc { color: var(--muted); font-size: 13px; }
+.da-price { color: var(--primary); font-weight: 700; font-size: 15px; margin-top: 4px; }
+.da-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.da-meta span { font-size: 12px; background: var(--bg-soft); color: var(--muted); padding: 3px 8px; border-radius: 4px; }
+.da-actions { display: flex; gap: 8px; margin-top: auto; padding-top: 14px; }
+.da-actions .btn { flex: 1; padding: 9px 10px; font-size: 13px; }
+.da-actions .btn:not(.btn-primary) { color: var(--primary); border-color: var(--primary); }
+.da-actions .btn:not(.btn-primary):hover { background: var(--lp-tint); }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .status.done { background: #1e1b4b; color: #c7d2fe; }
+}
+:root[data-theme="dark"] .status.done { background: #1e1b4b; color: #c7d2fe; }
+
+@media (max-width: 1024px) {
+  .da-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 720px) {
+  .da-grid { grid-template-columns: 1fr; }
+  .da-toolbar { flex-direction: column; align-items: stretch; }
+  .da-filter { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; }
+  .da-filter button { flex-shrink: 0; }
+  .da-select { display: block; }
+  .da-select select { width: 100%; }
+}

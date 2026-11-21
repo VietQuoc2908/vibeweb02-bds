@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{Tiêu đề trang}} – NhàĐất Việt</title>
+  <meta name="description" content="{{Mô tả ngắn 1 câu cho SEO}}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/page.css" />
+  <!-- {{Nếu có: <link rel="stylesheet" href="../assets/css/pages/SLUG.css" />}} -->
+</head>
+<body>
+
+  <!-- {{Dán nguyên khối <svg> sprite chứa <symbol id="logoMark"> từ index.html}} -->
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="container header-inner">
+      <a href="../index.html" class="logo" aria-label="NhàĐất Việt – Trang chủ"><svg class="logo-mark" aria-hidden="true"><use href="#logoMark"/></svg><span class="logo-text"><span class="logo-name">NhàĐất<b>Việt</b></span><span class="logo-tag">Bất động sản xanh</span></span></a>
+      <nav class="main-nav" id="mainNav">
+        <a href="../index.html">Trang chủ</a>
+        <a href="#gioi-thieu">Giới thiệu</a>
+        <a href="#noi-bat">Nổi bật</a>
+        <a href="#tien-ich">Tiện ích</a>
+        <a href="#hoi-dap">Hỏi đáp</a>
+        <a href="#lien-he">Liên hệ</a>
+      </nav>
+      <div class="header-actions">
+        <a href="#lien-he" class="btn btn-primary">{{Nút hành động, vd. Nhận tư vấn}}</a>
+        <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Mở menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="lp-hero" id="gioi-thieu">
+      <img class="lp-hero-bg" src="https://picsum.photos/seed/{{slug}}-hero/1600/900" alt="{{Mô tả ảnh nền}}" />
+      <div class="container lp-hero-inner">
+        <span class="lp-eyebrow">{{Eyebrow ngắn}}</span>
+        <h1>{{Tiêu đề chính <em>nhấn mạnh</em>}}</h1>
+        <p class="lp-lead">{{Mô tả 1–2 câu}}</p>
+        <div class="lp-actions">
+          <a href="#lien-he" class="btn btn-primary btn-lg">{{CTA chính}}</a>
+          <a href="#tien-ich" class="btn btn-ghost btn-lg">{{CTA phụ}}</a>
+        </div>
+        <ul class="lp-trust">
+          <li>✔ {{Điểm tin cậy 1}}</li>
+          <li>✔ {{Điểm tin cậy 2}}</li>
+          <li>✔ {{Điểm tin cậy 3}}</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== NỔI BẬT ===== -->
+    <section class="lp-section" id="noi-bat">
+      <div class="container">
+        <div class="lp-stats">
+          <div class="lp-stat reveal"><strong data-count="{{số}}" data-suffix="{{+ / % / ha…}}">0</strong><span>{{Nhãn}}</span></div>
+          <!-- {{…tổng 4 chỉ số}} -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TIỆN ÍCH / GIÁ TRỊ ===== -->
+    <section class="lp-section soft" id="tien-ich">
+      <div class="container">
+        <div class="lp-head reveal">
+          <span class="lp-eyebrow">{{Eyebrow}}</span>
+          <h2>{{Tiêu đề section}}</h2>
+          <p>{{Mô tả ngắn}}</p>
+        </div>
+        <div class="lp-features">
+          <article class="lp-feature reveal">
+            <div class="lp-icon" aria-hidden="true">{{emoji}}</div>
+            <h3>{{Tiêu đề}}</h3>
+            <p>{{1–2 câu}}</p>
+          </article>
+          <!-- {{…tổng 6 thẻ}} -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION PHỤ (tùy chủ đề – xem ví dụ markup trong page.css) ===== -->
+
+    <!-- ===== HỎI ĐÁP ===== -->
+    <section class="lp-section" id="hoi-dap">
+      <div class="container lp-narrow">
+        <div class="lp-head reveal"><h2>Câu hỏi thường gặp</h2></div>
+        <div class="lp-faq">
+          <details class="reveal">
+            <summary>{{Câu hỏi}}</summary>
+            <p>{{Trả lời}}</p>
+          </details>
+          <!-- {{…4–5 câu}} -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA + LIÊN HỆ ===== -->
+    <section class="lp-section soft" id="lien-he">
+      <div class="container">
+        <div class="lp-cta reveal">
+          <div>
+            <h2>{{Lời kêu gọi}}</h2>
+            <p>{{Ưu đãi / lợi ích khi liên hệ}}</p>
+          </div>
+          <a href="tel:19000000" class="btn btn-light btn-lg">📞 Gọi 1900 0000</a>
+        </div>
+
+        <div class="lp-contact">
+          <form class="lp-form reveal" id="contactForm" novalidate>
+            <h3>{{Tiêu đề form}}</h3>
+            <div class="lp-field-row">
+              <label class="lp-field"><span>Họ và tên *</span><input name="name" type="text" required autocomplete="name" /></label>
+              <label class="lp-field"><span>Số điện thoại *</span><input name="phone" type="tel" required pattern="(0|\+84)[0-9]{9}" autocomplete="tel" /></label>
+            </div>
+            <label class="lp-field"><span>Email</span><input name="email" type="email" autocomplete="email" /></label>
+            <label class="lp-field"><span>Nhu cầu *</span>
+              <select name="need" required>
+                <option value="">-- Chọn nhu cầu --</option>
+                <!-- {{Các lựa chọn theo chủ đề}} -->
+              </select>
+            </label>
+            <label class="lp-field"><span>Lời nhắn</span><textarea name="message" rows="4"></textarea></label>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">{{Gửi yêu cầu}}</button>
+            <p class="lp-note">Thông tin của bạn được bảo mật (dữ liệu demo).</p>
+          </form>
+          <aside class="lp-info reveal">
+            <h3>Thông tin liên hệ</h3>
+            <ul>
+              <li><span aria-hidden="true">📍</span>{{Địa chỉ giả lập}}</li>
+              <li><span aria-hidden="true">📞</span>Hotline: 1900 0000</li>
+              <li><span aria-hidden="true">✉️</span>{{email}}@nhadatviet.example</li>
+              <li><span aria-hidden="true">🕘</span>8:00 – 20:00, Thứ 2 – Chủ nhật</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER: chép từ index.html, đổi link logo thành ../index.html ===== -->
+
+  <button class="lp-top" id="backToTop" aria-label="Lên đầu trang">↑</button>
+  <div class="lp-toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="../assets/js/page.js"></script>
+  <!-- {{Nếu có: <script src="../assets/js/pages/SLUG.js"></script>}} -->
+</body>
+</html>

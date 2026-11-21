@@ -1,0 +1,178 @@
+/* =====================================================================
+   page.css – Thư viện section landing dùng chung cho các trang trong pages/
+   Phụ thuộc biến màu & class chung trong style.css (nạp trước file này).
+   ===================================================================== */
+
+/* ===== Biến riêng cho landing ===== */
+:root {
+  --lp-radius: 12px;
+  --lp-tint: #ecfdf3;
+  --lp-tint-text: #15803d;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --lp-tint: #12291c; --lp-tint-text: #4ade80; }
+}
+:root[data-theme="dark"] { --lp-tint: #12291c; --lp-tint-text: #4ade80; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+
+/* ===== Nút bổ sung ===== */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; transition: background .2s, transform .2s, box-shadow .2s; }
+.btn-lg { padding: 13px 24px; font-size: 15px; border-radius: 10px; }
+.btn-block { width: 100%; }
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(22,163,74,.3); }
+.btn-ghost { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.55); color: #fff; }
+.btn-ghost:hover { background: rgba(255,255,255,.22); }
+.btn-light { background: #fff; border-color: #fff; color: var(--primary-deep); }
+.btn-light:hover { background: #f0fdf4; }
+
+/* ===== Header khi cuộn & menu đang chọn ===== */
+header { transition: box-shadow .25s; }
+header.scrolled { box-shadow: 0 4px 18px rgba(0,0,0,.08); }
+nav.main-nav a.active { color: var(--primary); background: var(--lp-tint); }
+
+/* ===== Khung section ===== */
+.lp-section { padding: 72px 0; }
+.lp-section.soft { background: var(--bg-soft); }
+.lp-narrow { max-width: 820px; }
+.lp-head { text-align: center; max-width: 640px; margin: 0 auto 40px; }
+.lp-head h2 { font-size: clamp(24px, 3.2vw, 34px); font-weight: 700; line-height: 1.25; }
+.lp-head p { color: var(--muted); margin-top: 10px; }
+.lp-eyebrow { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--lp-tint-text); background: var(--lp-tint); padding: 4px 12px; border-radius: 999px; margin-bottom: 12px; }
+
+/* ===== Hero ===== */
+.lp-hero { position: relative; min-height: min(86vh, 680px); display: flex; align-items: center; color: #fff; overflow: hidden; isolation: isolate; }
+.lp-hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; transform: scale(1.05); animation: lpZoom 14s ease-out forwards; }
+.lp-hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(100deg, rgba(6,40,28,.88) 0%, rgba(6,40,28,.6) 50%, rgba(6,40,28,.2) 100%); }
+.lp-hero-inner { width: 100%; padding-top: 64px; padding-bottom: 64px; }
+.lp-hero .lp-eyebrow { background: rgba(74,222,128,.18); color: #bbf7d0; }
+.lp-hero h1 { font-size: clamp(30px, 5.2vw, 56px); line-height: 1.12; font-weight: 700; max-width: 720px; letter-spacing: -.5px; }
+.lp-hero h1 em { font-style: normal; color: var(--primary-light); }
+.lp-lead { font-size: clamp(16px, 1.6vw, 19px); opacity: .92; margin-top: 16px; max-width: 580px; }
+.lp-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.lp-trust { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 28px; font-size: 14px; opacity: .9; }
+@keyframes lpZoom { to { transform: scale(1); } }
+
+/* ===== Chỉ số nổi bật ===== */
+.lp-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.lp-stat { background: var(--card); border: 1px solid var(--border); border-radius: var(--lp-radius); padding: 28px 20px; text-align: center; }
+.lp-stat strong { display: block; font-size: clamp(30px, 4vw, 42px); font-weight: 700; color: var(--primary); line-height: 1.1; font-variant-numeric: tabular-nums; }
+.lp-stat span { color: var(--muted); font-size: 14px; }
+
+/* ===== Thẻ tiện ích / giá trị ===== */
+.lp-features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.lp-feature { background: var(--card); border: 1px solid var(--border); border-radius: var(--lp-radius); padding: 26px; transition: transform .25s, box-shadow .25s, border-color .25s; }
+.lp-feature:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--primary-light); }
+.lp-icon { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; font-size: 26px; background: var(--lp-tint); margin-bottom: 16px; }
+.lp-feature h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+.lp-feature p { color: var(--muted); font-size: 14.5px; }
+
+/* ===== Split: ảnh + nội dung =====
+   <div class="lp-split"><img class="reveal" …/><div class="reveal"><h2/><p/><ul class="lp-checks"><li/>…</ul></div></div>
+   Thêm .reverse để đảo vị trí ảnh. */
+.lp-split { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.lp-split.reverse > :first-child { order: 2; }
+.lp-split img { width: 100%; border-radius: var(--lp-radius); aspect-ratio: 4/3; object-fit: cover; box-shadow: var(--shadow); }
+.lp-split h2 { font-size: clamp(24px, 3vw, 32px); font-weight: 700; line-height: 1.25; }
+.lp-split p { color: var(--muted); margin-top: 12px; }
+.lp-checks { list-style: none; margin-top: 18px; display: grid; gap: 10px; }
+.lp-checks li { padding-left: 30px; position: relative; }
+.lp-checks li::before { content: "✓"; position: absolute; left: 0; top: 1px; width: 20px; height: 20px; border-radius: 50%; background: var(--primary); color: #fff; font-size: 12px; display: grid; place-items: center; }
+
+/* ===== Quy trình =====
+   <ol class="lp-steps"><li class="reveal"><h3/><p/></li>…</ol> */
+.lp-steps { list-style: none; counter-reset: step; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.lp-steps li { counter-increment: step; position: relative; background: var(--card); border: 1px solid var(--border); border-radius: var(--lp-radius); padding: 56px 20px 22px; }
+.lp-steps li::before { content: counter(step, decimal-leading-zero); position: absolute; top: 18px; left: 20px; font-weight: 700; font-size: 22px; color: var(--primary); }
+.lp-steps h3 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+.lp-steps p { color: var(--muted); font-size: 14px; }
+
+/* ===== Đánh giá khách hàng =====
+   <div class="lp-quotes"><figure class="lp-quote reveal"><blockquote/><figcaption><img/><span><b>Tên</b>Vai trò</span></figcaption></figure>…</div> */
+.lp-quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.lp-quote { background: var(--card); border: 1px solid var(--border); border-radius: var(--lp-radius); padding: 24px; display: flex; flex-direction: column; gap: 18px; }
+.lp-quote blockquote { font-size: 15px; }
+.lp-quote blockquote::before { content: "“"; display: block; font-size: 44px; line-height: .6; color: var(--primary); margin-bottom: 8px; }
+.lp-quote figcaption { display: flex; align-items: center; gap: 12px; margin-top: auto; font-size: 13px; color: var(--muted); }
+.lp-quote figcaption img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; }
+.lp-quote figcaption b { display: block; color: var(--text); font-size: 14px; }
+
+/* ===== Tab (gallery / bảng giá…) =====
+   <div data-tabs><div class="lp-tabs" role="tablist"><button role="tab" aria-selected="true" data-tab="a">A</button>…</div>
+   <div class="lp-tab-panel" data-panel="a">…</div>…</div> */
+.lp-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 24px; }
+.lp-tabs button { border: 1px solid var(--border); background: var(--card); color: var(--text); padding: 8px 18px; border-radius: 999px; font-size: 14px; font-weight: 500; transition: all .2s; }
+.lp-tabs button[aria-selected="true"] { background: var(--primary); border-color: var(--primary); color: #fff; }
+.lp-tab-panel[hidden] { display: none; }
+.lp-tab-panel { animation: lpFade .35s ease; }
+.lp-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.lp-gallery img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; }
+@keyframes lpFade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+/* ===== FAQ ===== */
+.lp-faq { display: grid; gap: 12px; }
+.lp-faq details { background: var(--card); border: 1px solid var(--border); border-radius: 10px; transition: border-color .2s; }
+.lp-faq details[open] { border-color: var(--primary); }
+.lp-faq summary { list-style: none; cursor: pointer; padding: 18px 52px 18px 20px; font-weight: 500; position: relative; }
+.lp-faq summary::-webkit-details-marker { display: none; }
+.lp-faq summary::after { content: "+"; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); font-size: 22px; color: var(--primary); transition: transform .25s; }
+.lp-faq details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+.lp-faq details p { padding: 0 20px 18px; color: var(--muted); }
+
+/* ===== CTA ===== */
+.lp-cta { background: linear-gradient(135deg, var(--primary-deep), var(--primary) 60%, #34d399); color: #fff; border-radius: 16px; padding: 36px 40px; display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-bottom: 40px; }
+.lp-cta h2 { font-size: clamp(22px, 2.6vw, 28px); font-weight: 700; }
+.lp-cta p { opacity: .92; margin-top: 6px; }
+
+/* ===== Liên hệ ===== */
+.lp-contact { display: grid; grid-template-columns: 1.5fr 1fr; gap: 24px; align-items: start; }
+.lp-form, .lp-info { background: var(--card); border: 1px solid var(--border); border-radius: var(--lp-radius); padding: 28px; }
+.lp-form h3, .lp-info h3 { font-size: 20px; font-weight: 700; margin-bottom: 18px; }
+.lp-field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.lp-field { display: block; margin-bottom: 14px; }
+.lp-field span { display: block; font-size: 13px; font-weight: 500; margin-bottom: 6px; }
+.lp-field input, .lp-field select, .lp-field textarea { width: 100%; padding: 11px 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--text); font: inherit; font-size: 15px; transition: border-color .2s, box-shadow .2s; }
+.lp-field textarea { resize: vertical; }
+.lp-field input:focus, .lp-field select:focus, .lp-field textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(22,163,74,.18); }
+.lp-field.invalid input, .lp-field.invalid select { border-color: #dc2626; }
+.lp-field .lp-error { color: #dc2626; font-size: 12px; margin-top: 4px; font-weight: 400; }
+.lp-note { color: var(--muted); font-size: 12px; text-align: center; margin-top: 10px; }
+.lp-info ul { list-style: none; display: grid; gap: 14px; }
+.lp-info li { display: flex; gap: 10px; color: var(--muted); }
+
+/* ===== Lên đầu trang & toast ===== */
+.lp-top { position: fixed; right: 16px; bottom: 16px; width: 44px; height: 44px; border-radius: 50%; border: none; background: var(--primary); color: #fff; font-size: 20px; box-shadow: var(--shadow); opacity: 0; pointer-events: none; transform: translateY(10px); transition: opacity .25s, transform .25s; z-index: 40; }
+.lp-top.show { opacity: 1; pointer-events: auto; transform: none; }
+.lp-toast { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 20px); background: #0f172a; color: #fff; padding: 12px 20px; border-radius: 10px; font-size: 14px; opacity: 0; pointer-events: none; transition: opacity .3s, transform .3s; z-index: 60; max-width: calc(100% - 32px); text-align: center; }
+.lp-toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+/* ===== Hiện dần khi cuộn ===== */
+.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+.js .reveal.visible { opacity: 1; transform: none; }
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .lp-features, .lp-quotes { grid-template-columns: repeat(2, 1fr); }
+  .lp-steps { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 720px) {
+  .lp-section { padding: 52px 0; }
+  .lp-stats { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .lp-features, .lp-quotes, .lp-steps, .lp-split, .lp-contact, .lp-field-row { grid-template-columns: 1fr; }
+  .lp-split { gap: 24px; }
+  .lp-split.reverse > :first-child { order: 0; }
+  .lp-gallery { grid-template-columns: repeat(2, 1fr); }
+  .lp-cta { flex-direction: column; align-items: flex-start; padding: 28px 24px; }
+  .lp-form, .lp-info { padding: 22px; }
+}
+@media (max-width: 480px) {
+  .lp-actions .btn { flex: 1 1 100%; }
+  .lp-stat { padding: 20px 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .lp-hero-bg { animation: none; transform: none; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
