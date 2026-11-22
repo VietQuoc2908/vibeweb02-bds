@@ -1,0 +1,30 @@
+@startuml kien-truc-trang
+' Sơ đồ mẫu: cấu trúc trang và tài nguyên của NhàĐất Việt
+skinparam componentStyle rectangle
+skinparam defaultFontName Roboto
+
+package "Trang HTML" {
+  [index.html] as Home
+  [pages/du-an.html] as DuAn
+}
+
+package "assets/css" {
+  [style.css] as Style
+  [page.css] as PageCss
+  [pages/du-an.css] as DuAnCss
+}
+
+package "assets/js" {
+  [main.js] as Main
+  [page.js] as PageJs
+  [pages/du-an.js] as DuAnJs
+}
+
+Home --> Style
+Home --> Main
+DuAn --> Style
+DuAn --> PageCss
+DuAn --> DuAnCss
+DuAn --> PageJs
+DuAn --> DuAnJs
+@enduml
