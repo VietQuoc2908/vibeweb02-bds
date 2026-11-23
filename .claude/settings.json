@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ffprobe *)",
+      "Bash(afinfo *)",
+      "Bash(md5 *)"
+    ]
+  }
+}

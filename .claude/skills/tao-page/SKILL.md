@@ -14,11 +14,13 @@ Nếu `$ARGUMENTS` trống, hỏi đúng **một** câu (dùng AskUserQuestion) 
 
 ## 1. Đọc bối cảnh (bắt buộc, trước khi viết code)
 
-- `.claude/CLAUDE.md` – quy tắc màu, logo, responsive, code. **Mọi quy tắc trong đó đều áp dụng.**
-- `index.html` – lấy nguyên khối `<svg>` sprite chứa `<symbol id="logoMark">`, markup `header` và `footer` để trang mới thống nhất.
-- `assets/css/style.css` – biến màu (`--primary`, `--text`, …), class dùng chung (`.container`, `.btn`, `.btn-primary`, `.logo…`, header, footer).
+- `CLAUDE.md` (gốc dự án) – quy tắc màu, logo, responsive, code. **Mọi quy tắc trong đó đều áp dụng.**
+- `frontend/index.html` – lấy nguyên khối `<svg>` sprite chứa `<symbol id="logoMark">`, markup `header` và `footer` để trang mới thống nhất.
+- `frontend/assets/css/style.css` – biến màu (`--primary`, `--text`, …), class dùng chung (`.container`, `.btn`, `.btn-primary`, `.logo…`, header, footer).
 
 ## 2. Cấu trúc file
+
+Mọi đường dẫn trong skill này (`index.html`, `pages/…`, `assets/…`) đều nằm trong thư mục `frontend/`.
 
 ```text
 pages/<slug>.html            # Trang mới (bắt buộc)
@@ -68,5 +70,5 @@ Nội dung: **tiếng Việt tự nhiên, cụ thể theo chủ đề** (không 
 
 ## 6. Hoàn tất
 
-- Nếu đây là trang đầu tiên trong `pages/`, cập nhật mục "Cấu trúc thư mục" trong `.claude/CLAUDE.md` (thêm `pages/`, `page.css`, `page.js`).
+- Nếu đây là trang đầu tiên trong `pages/`, cập nhật mục "Cấu trúc thư mục" trong `CLAUDE.md` (gốc dự án) (thêm `pages/`, `page.css`, `page.js`).
 - Báo lại ngắn gọn bằng tiếng Việt: file đã tạo (link markdown), các section đã có, kết quả kiểm tra, và cách mở trang. Hỏi người dùng có muốn thêm link tới trang mới vào menu trang chủ không (không tự sửa `index.html`).

@@ -3,18 +3,18 @@
 skinparam componentStyle rectangle
 skinparam defaultFontName Roboto
 
-package "Trang HTML" {
+package "frontend (HTML)" {
   [index.html] as Home
   [pages/du-an.html] as DuAn
 }
 
-package "assets/css" {
+package "frontend/assets/css" {
   [style.css] as Style
   [page.css] as PageCss
   [pages/du-an.css] as DuAnCss
 }
 
-package "assets/js" {
+package "frontend/assets/js" {
   [main.js] as Main
   [page.js] as PageJs
   [pages/du-an.js] as DuAnJs

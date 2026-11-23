@@ -2,3 +2,6 @@
 .claude/settings.local.json
 .vercel
 .env*
+node_modules/
+data/*.db
+data/*.db-*
