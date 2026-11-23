@@ -1,5 +1,5 @@
 @startuml kien-truc-trang
-' Sơ đồ mẫu: cấu trúc trang và tài nguyên của NhàĐất Việt
+' Sơ đồ mẫu: cấu trúc trang và tài nguyên của HomeLand Viet
 skinparam componentStyle rectangle
 skinparam defaultFontName Roboto
 

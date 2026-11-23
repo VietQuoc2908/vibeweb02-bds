@@ -1,6 +1,6 @@
 ---
 name: tao-page
-description: Tạo một trang web (landing page) hoàn chỉnh, responsive cho dự án NhàĐất Việt – gồm banner giới thiệu, thông tin nổi bật, tiện ích/giá trị, khu vực kêu gọi hành động/liên hệ và JavaScript tương tác. Dùng khi người dùng gõ /tao-page hoặc yêu cầu "tạo trang", "tạo page", "làm landing page" mới trong dự án này.
+description: Tạo một trang web (landing page) hoàn chỉnh, responsive cho dự án HomeLand Viet – gồm banner giới thiệu, thông tin nổi bật, tiện ích/giá trị, khu vực kêu gọi hành động/liên hệ và JavaScript tương tác. Dùng khi người dùng gõ /tao-page hoặc yêu cầu "tạo trang", "tạo page", "làm landing page" mới trong dự án này.
 argument-hint: "[mô tả trang, ví dụ: trang giới thiệu dự án Sky Lake Tower]"
 ---
 

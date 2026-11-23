@@ -1,4 +1,4 @@
-# NhàĐất Việt – Quy tắc & kiến trúc dự án
+# HomeLand Viet – Quy tắc & kiến trúc dự án
 
 Trang demo học tập: trang chủ một kênh mua bán/cho thuê nhà đất. Toàn bộ dữ liệu là giả lập, không có backend.
 
@@ -54,7 +54,7 @@ DemoBuoi1/
 
 ### Logo
 
-- Logo = SVG mark (nhà + lá, nền gradient xanh) + chữ "NhàĐất**Việt**" + tagline "Bất động sản xanh".
+- Logo = SVG mark (nhà + lá, nền gradient xanh) + chữ "HomeLand**Viet**" + tagline "Bất động sản xanh".
 - Logo mark có trong `<symbol id="logoMark">` của `index.html`, mọi file `pages/*.html` và `assets/images/logo.svg`. Sửa logo phải sửa tất cả các nơi này.
 - Giữ sprite inline (không trỏ `<use>` sang file ngoài) để trang vẫn chạy khi mở bằng `file://`.
 

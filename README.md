@@ -1,4 +1,4 @@
-# NhàĐất Việt (demo)
+# HomeLand Viet (demo)
 
 Trang chủ mẫu cho một kênh mua bán, cho thuê nhà đất – bài thực hành buổi 1. HTML/CSS/JS thuần, dữ liệu giả lập.
 
